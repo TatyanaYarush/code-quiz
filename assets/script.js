@@ -7,6 +7,13 @@ var startBtn = document.querySelector("#start");
 var initialsEl = document.querySelector("#initials");
 var feedbackEl = document.querySelector("#feedback");
 
+
+var question = "";
+var currentQuestionIndex = 0;
+var time = questions.length * 15;
+var timerId;
+
+
 //Start Timer ???
 var secondsLeft = 75;
 function setTime() {
@@ -75,7 +82,7 @@ function questionClick() {
     }
 
     //
-    currentQuestionIndex++ //next question
+    currentQuestionIndex++; //next question
 
     //Quiz ended check time
     if (currentQuestionIndex === questions.length) {
@@ -116,9 +123,9 @@ function clockTick() {
 function saveHighscore() {
     // get value of input box
     var initials = initialsEl.value.trim();
-//empty field > click submit
+    //empty field > click submit
     if (initials !== "") {
-        alert("Please enter your initials")
+        alert("Please enter your initials");
         saveHighscore();
 
         var highscores =
