@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <div class="scores"><a href="highScores.html">View High Scores</a></div>
+    <div class="scores"><a href="highscore.html">View Highscores</a></div>
     <div class="timer">Time: <span id="time">75</span></div>
 
     <div class="container">
@@ -23,16 +23,34 @@
             <button id="start">Start Quiz</button>
         </div>
 
-        <div id= "questions" class="hide">
+        <div id="questions" class="hide">
             <h2 id="question-title"></h2>
             <div id="choices" class="choices"></div>
         </div>
 
-    </div>
+        <div id="end game" class="hide">
+            <h2> GAME OVER!!!</h2>
+            <h3>You scored <span id="scoreBtn" class="btn">Score</span> points!</h3>
+            <form>
+                <label for="initialsBox">Enter Your Initials Here:</label><br>
+                <input id="initialsBox" type="text" maxlength="30"><br>
+                <button id="submitBtn">Submit</button>
+            </form>
+        </div>
 
+        <div class="wrapper">
+            <h1>Highscores</h1>
+            <ol id="highscores"></ol>
 
-    <script src="./assets/script.js"></script>
-    <script src="./assets/questions.js"></script>
+            <button id="backBtn" type="button" class="btn">Play Again</button>
+            <button id="clearBtn" type="button" class="btn">Clear Scores</button>
+            <div id="feedback" class="feedback hide"></div>
+
+        </div>
+
+        <script src="./assets/questions.js"></script>
+        <script src="./assets/script.js"></script>
+
 
 
 </body>
