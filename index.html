@@ -10,11 +10,12 @@
 </head>
 
 <body>
-    <div class="scores"><a href="highscore.html">View Highscores</a></div>
+    <div class="scores"><a href="highscore.html">View Highscores</a></div> <!--no using-->
     <div class="timer">Time: <span id="time">75</span></div>
 
     <div class="container">
         <div class="wrapper">
+            <div id="start-screen" class="start"></div>
             <h1>Coding Quiz Challenge</h1>
             <p>Answer the following JavaScript questions within the time limit.</p>
             <p>Try your best to get the HIGH SCORE.</p>
@@ -23,12 +24,16 @@
             <button id="start">Start Quiz</button>
         </div>
 
+        <div class="container"></div>
+        <div class="questions"></div>
         <div id="questions" class="hide">
             <h2 id="question-title"></h2>
             <div id="choices" class="choices"></div>
         </div>
 
-        <div id="end game" class="hide">
+        
+       
+        <div id="end-screen" class="hide">
             <h2> GAME OVER!!!</h2>
             <h3>You scored <span id="scoreBtn" class="btn">Score</span> points!</h3>
             <form>
@@ -38,20 +43,22 @@
             </form>
         </div>
 
+        <!-- Highsscores class instead highscore.html file??-->
         <div class="wrapper">
             <h1>Highscores</h1>
             <ol id="highscores"></ol>
 
             <button id="backBtn" type="button" class="btn">Play Again</button>
-            <button id="clearBtn" type="button" class="btn">Clear Scores</button>
-            <div id="feedback" class="feedback hide"></div>
-
+            <button id="clear" type="button" class="btn">Clear HighsScores</button>
         </div>
 
-        <script src="./assets/questions.js"></script>
-        <script src="./assets/script.js"></script>
+        <div id="feedback" class="feedback"></div>
 
+    </div>
 
+    <script src="./assets/questions.js"></script>
+    <script src="./assets/highscore.js"></script>
+    <script src="./assets/script.js"></script>
 
 </body>
 

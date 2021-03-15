@@ -5,7 +5,7 @@ body {
 }
 
 .container {
-    display: block;
+    
     margin: 60px auto;
     text-align: center;
     font-size: 17px;
@@ -39,7 +39,7 @@ button {
     cursor: pointer;
     font-family: "Architects Daughter", cursive;
     font-size: 100%;
-    background-color: teal;
+    background-color: rgb(46, 110, 230);
     border-radius: 5px;
     padding: 2px 10px;
     color: white;
@@ -49,4 +49,8 @@ button {
 
   button:hover {
     background-color: silver;
+  }
+
+  .hide {
+    display: none;
   }

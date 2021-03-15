@@ -8,14 +8,32 @@ var initialsEl = document.querySelector("#initials");
 var feedbackEl = document.querySelector("#feedback");
 
 
-var question = "";
 var currentQuestionIndex = 0;
-var time = questions.length * 15;
+var time = "100";
 var timerId;
 
 
+//Start Button??
+//startBtn.addEventListener("click", startQuiz);
+
+// Start Quiz
+function startQuiz() {
+    var startScreenEl = document.getElementById("start-screen");
+    startScreenEl.setAttribute("class", "hide");
+
+    questionsEl.removeAttribute("class");
+
+    timerId = setInterval(clockTick, 1000);
+console.log(time)
+    timerEl.textContent = time;
+
+    //  setTime();
+    getQuestion();
+}
+
+
 //Start Timer ???
-var secondsLeft = 75;
+/*var secondsLeft = 75;
 function setTime() {
     var timerInterval = setInterval(function () {
         secondsLeft--;
@@ -31,16 +49,9 @@ function setTime() {
         }
     }, 1000);
 }
-setTime();
+//setTime(); */
 
-//Start Button
-startBtn.addEventListener("click", startQuiz);
 
-// Start Quiz
-function startQuiz() {
-    setTime();
-    getQuestion();
-}
 
 //Start Questions
 function getQuestion() {
@@ -102,14 +113,17 @@ var endScreenEl = document.getElementById("end-screen");
 endScreenEl.removeAttribute("class");
 
 // show final score
-var finalScoreEl = document.getElementById("final-score");
-finalScoreEl.textContent = time;
+//var finalScoreEl = document.getElementById("finalscore");
+//finalScoreEl.textContent = time;
+document.getElementById("finalscore").textContent = time;
+
+
 
 // hide questions section
 questionsEl.setAttribute("class", "hide");
 
 // Update time
-function clockTick() {
+function clockTime() {
     time--;
     timerEl.textContent = time;
 
@@ -153,6 +167,6 @@ function checkForEnter(event) {
     }
 }
 
-submitBtn.onclick = saveHighscore; // submit initials
-startBtn.onclick = startQuiz; // start quiz
-initialsEl.onkeyup = checkForEnter; //enterinitials
+startBtn.onclick = startQuiz(); // start quiz
+submitBtn.onclick = saveHighscore(); // submit initials
+initialsEl.onkeyup = checkForEnter(); //enterinitials
