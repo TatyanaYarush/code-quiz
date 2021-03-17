@@ -1,6 +1,6 @@
 # code-quiz
 
-[Link to Coding Quiz Challenge](https://tatyanayarush.github.io/code-quiz/?)
+[Link to Coding Quiz Challenge](https://tatyanayarush.github.io/code-quiz/)
 
 ## Your Task
 
