@@ -1,72 +1,53 @@
-var questions = [
-    {
-        title: "Inside which HTML element do we put the JavaScript?",
-        choices: [
-            "<script>",
-            "<js>",
-            "<javascript>",
-            "<JS>"
-        ],
-        answer: "<script>"
-    },
-    {
-        title: "What is the correct syntax for referring to an external script called 'xxx.js'?",
-        choices: [
-            "<script name='./xxx.js'>",
-            "<script href='./xxx.js'>",
-            "<script scr='./xxx.js'>",
-            "<script ='./xxx.js'>"
-        ],
-        answer: "<script scr='./xxx.js'>"
-    },
-    {
-        title: "How do you create a function in JavaScript?",
-        choices: [
-            "function = myFunction()",
-            "function:myFunction(",
-            "function myFunction()",
-            "myFunction()"
-        ],
-        answer: "function myFunction()"
-    },
-    {
-        title: "How to write an IF statement for executing some code if 'i' is NOT equal to 5?",
-        choices: [
-            "if (i != 5)  ",
-            "if (i <> 5)",
-            "if i =! 5 then",
-            "if i <> 5"
-        ],
-        answer: "if (i != 5)  "
-    },
-    {
-        title: "What is the correct way to write a JavaScript array?",
-        choices: [
-            "var colors = (1:'red', 2:'green', 3:'blue')",
-            "var colors = ['red', 'green', 'blue']",
-            "var colors = 1 = ('red'), 2 = ('green'), 3 = ('blue')",
-            "var colors = 'red', 'green', 'blue'"
-        ],
-        answer: "var colors = ['red', 'green', 'blue']"
-    },
-    {
-        title: "How can you add a comment in a JavaScript?",
-        choices: [
-            "//This is a comment",
-            "'This is a comment",
-            "<!--This is a comment-->",
-            "<This is a comment//>"
-        ],
-        answer: "//This is a comment"
-    },
-    {
-        title: "What is the data type of variables in JavaScript?",
-        choices: [
-            "Object data types",
-            "Function data type",
-            "None of the above",
-            "All of the above"
-        ],
-        answer: "Object data types"
-    }
-];
+
+var questions = [{
+    question: "Inside which HTML element do we put the JavaScript?",
+    answer1: "<script>",
+    answer2: "<js>",
+    answer3: "<JS>",
+    answer4: "<javascript>",
+    correct: "<script>"
+  },{
+    question: "What is the correct syntax for referring to an external script called 'xxx.js'?",
+    answer1: "<script name='./xxx.js'>",
+    answer2: "<script href='./xxx.js'>",
+    answer3: "<script scr='./xxx.js'>",
+    answer4: "<script ='./xxx.js'>",
+    correct: "<script scr='./xxx.js'>"
+  },{
+    question: "How do you create a function in JavaScript?",
+    answer1: "function = myFunction()",
+    answer2: "function:myFunction()",
+    answer3: "function myFunction()",
+    answer4: "myFunction()",
+    correct: "function myFunction()"
+  },{
+    question: "How to write an IF statement for executing some code if 'i' is NOT equal to 5?",
+    answer1: "if (i != 5) ",
+    answer2: "if (i <> 5)",
+    answer3: "if i =! 5 then",
+    answer4: "if i <> 5",
+    correct: "if (i != 5)  "
+  },{
+    question: "What is the correct way to write a JavaScript array?",
+    answer1: "var colors = (1:'red', 2:'green', 3:'blue')",
+    answer2: "var colors = ['red', 'green', 'blue']",
+    answer3: "var colors = 1 = ('red'), 2 = ('green'), 3 = ('blue')",
+    answer4: "var colors = 'red', 'green', 'blue'",
+    correct: "var colors = ['red', 'green', 'blue']"
+},{
+    question: "How can you add a comment in a JavaScript?",
+    answer1: "//This is a comment",
+    answer2: "'This is a comment",
+    answer3: "<!--This is a comment-->",
+    answer4: "<This is a comment//>",
+    correct: "//This is a comment"
+},{
+    question: "What is the data type of variables in JavaScript?",
+    answer1: "Object data types",
+    answer2: "Function data type",
+    answer3: "All of the above",
+    answer4: "None of the above",
+    correct: "Object data types"
+  }];
+  
+ 

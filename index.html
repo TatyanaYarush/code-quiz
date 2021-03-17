@@ -3,51 +3,84 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <title>Code Quiz</title>
     <link rel="stylesheet" href="./assets/style.css">
+
 </head>
 
 <body>
-    <div class="scores"><a href="highscore.html">View Highscores</a></div>
-    <div class="timer">Time: <span id="time">75</span></div>
-
-    <div class="container">
-        <div class="wrapper">
-            <div id="start-screen" class="start">
-                <h1>Coding Quiz Challenge</h1>
-                <p>Answer the following JavaScript questions within the time limit.</p>
-                <p>Try your best to get the HIGH SCORE.</p>
-                <p>Notes: Incorrect answers will penalize your time by 3 seconds!</p>
-                <p>GOOD LUCK!</p>
-                <button id="start">Start Quiz</button>
+    <div class="container-fluid">
+        <div class="row" id="row1">
+            <div class="col-9">
+                <a href="highscore.html" id="highScore">View High Scores</a>
             </div>
-
-            <div id="questions" class="hide">
-                <h2 id="question-title"></h2>
-                <div id="choices" class="choices"></div>
+            <div class="col-3" id="timer">
+                <a>Time: 75</a>
             </div>
-
-
-            <div id="end-screen" class="hide">
-                <h2> GAME OVER!!!</h2>
-                <h3>You scored <span id="final-score" class="btn">Score</span> points!</h3>
-                <form>
-                    <label for="initialsBox">Enter Your Initials Here:</label><br>
-                    <input id="initialsBox" type="text" maxlength="30"><br>
-                    <button id="submitBtn">Submit</button>
-                </form>
-            </div>
-
-
-            <div id="feedback" class="feedback hide"></div>
-
         </div>
+    </div>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container-fluid">
+            <h1 class="display-3">Coding Quiz Challenge <br>
+                Answer the following JavaScript questions within the time limit.<br>
+                Try your best to get the HIGH SCORE.<br>
+                Notes: Incorrect answers will penalize your time by 3 seconds!<br>
+                GOOD LUCK!<br>
+            </h1>
 
-        <script src="./assets/questions.js"></script>
-        <script src="./assets/script.js"></script>
 
+            <p class="lead">
+
+                <a class="btn btn-dark btn-lg" href="#" role="button" id="startQuiz">Start Quiz</a>
+                <input type="text" class="form-control mb-6" id="inlineFormInput" placeholder="Enter your initials">
+                <a class="btn btn-dark btn-lg" href="highscore.html" role="button" id="buttonInitials">Submit</a>
+            </p>
+        </div>
+    </div>
+
+    <div class="col-4" id="questionsCard">
+        <div class="card text-center" style="width: 18rem;" id="cardMedia">
+            <div class="card-body">
+                <h5 class="card-title">Questions</h5>
+                <p class="card-text" id="questions">With supporting text below as a natural lead-in to additional
+                    content??</p>
+                <div class="row buttonRow">
+                    <a href="#" class="btn btn-dark quizBtn" id="button1">Go somewhere</a>
+                </div>
+                <div class="row buttonRow">
+                    <a href="#" class="btn btn-dark quizBtn" id="button2">Go somewhere</a>
+                </div>
+                <div class="row buttonRow">
+                    <a href="#" class="btn btn-dark quizBtn" id="button3">Go somewhere</a>
+                </div>
+                <div class="row buttonRow">
+                    <a href="#" class="btn btn-dark quizBtn" id="button4">Go somewhere</a>
+                </div>
+                <div class="row buttonRow">
+                    <p id="correctIncorrect"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+    </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./assets/script.js"></script>
+    <script type="text/javascript" src="./assets/highscore.js"></script>
+    <script type="text/javascript" src="./assets/questions.js"></script>
 </body>
 
 </html>

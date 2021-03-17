@@ -1,28 +1,36 @@
-function printHighscores() {
-  
-    var highscores = JSON.parse(window.localStorage.getItem("highscores")) || [];
-  
+var highscores = JSON.parse(localStorage.getItem("highscores")) || [];
+var highScorePrint = document.querySelector(".scoresHTML");
+var clearHighScore = document.getElementById("clearScores");
 
-    highscores.sort(function(a, b) {
-      return b.score - a.score;
-    });
-  
-    highscores.forEach(function(score) {
-     
-      var liTag = document.createElement("li");
-      liTag.textContent = score.initials + " - " + score.score;
-  
-   
-      var olEl = document.getElementById("highscores");
-      olEl.appendChild(liTag);
-    });
-  }
-  
-  function clearHighscores() {
-    window.localStorage.removeItem("highscores");
+console.log(highscores)
+console.log(highScorePrint)
+console.log(clearHighScore)
+
+window.addEventListener("load", function(){printHighScore()});
+
+function printHighScore() {
+    highscores = scoresSorted(highscores, 'score');
+
+    for (var i = 0; i < highscores.length; i++) {
+      console.log(highscores[i].secondsLeft);
+      var home = document.createElement("li"); 
+      var words = document.createTextNode(highscores[i].initials + ": " + highscores[i].secondsLeft)  ; 
+      home.appendChild(words);
+      highScorePrint.appendChild(home);
+    }
+}
+
+function scoresSorted(array, key) {
+  return array.sort(function(a,b) {
+    if (a.secondsLeft < b.secondsLeft) {
+      return 1;
+    }
+    return -1;
+  });
+}
+
+clearHighScore.addEventListener("click", function() {
+    localStorage.removeItem("highscores");
     window.location.reload();
-  }
-  
-  document.getElementById("clear").onclick = clearHighscores;
-  
-  printHighscores();
+});
+

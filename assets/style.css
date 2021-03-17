@@ -1,75 +1,110 @@
+  
 body {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    margin: 2em;
-    background-color: rgb(115, 153, 165);
-}
-
-.hide {
-  display: none;
-  
-}
-.container {
-    /*display: block;*/
-    margin: 60px auto;
-    text-align: center;
-    font-size: 17px;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
-    width: 80vw;
-    background-color: #f0ead6;
-    padding-top: 20px;
-  }
- 
-  .wrapper {
-    padding-bottom: 30px;
-  }
-
-  .timer {
-    position: absolute;
-    top: 20px;
-    right: 30px;
-    color: rgb(189, 16, 82);
-  }
-
-  a {
-    color: rgb(3, 8, 78);
-    text-decoration: none;
-    transition: color 0.1s;
-}
-
-button {
-    display: inline-block;
-    margin: 5px;
-    cursor: pointer;
-    font-family: "Architects Daughter", cursive;
-    font-size: 100%;
-    background-color: rgb(65, 114, 206);
-    border-radius: 5px;
-    padding: 2px 10px;
-    color: white;
-    border: 0;
-    transition: background-color 0.1s;
-  }
-
-  button:hover {
-    background-color: rgb(117, 114, 114);
-  }
-
-  .choices button {
-    display: block;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  margin: 2em;
+  background-color: rgb(123, 168, 182);
   }
   
-  input[type="text"] {
-    font-size: 100%;
+  #row1 {
+      padding: 30px;
   }
   
-  ol {
-    padding-left: 0px;
-    max-height: 400px;
-    overflow: auto;
+  #row2 {
+      justify-content: center;
   }
   
-  li {
-    padding: 5px;
-    list-style: decimal inside none;
+  .col-3 {
+      color: #c00b0b;
+      text-align: center;
   }
+  
+  #highScore {
+      color: #161501;
+  }
+  
+  .display-3 {
+      text-align: center;
+      margin-top: -50px;
+      font-size: 25px;
+     
+      
+  }
+  
+  .lead {
+      text-align: center;
+  }
+  
+  .jumbotron {
+      background-color: #f0ead6;
+      height: 300px;
+  }
+  
+  .buttonRow {
+      justify-content: center;
+      padding: 5px;
+  }
+  
+  .card {
+      background-color: #f0ead6;
+      
+  }
+  
+
+  
+  .col-4 {
+      text-align: -webkit-center;
+  }
+  
+  #questionsCard {
+      display: none;
+  }
+  
+  #correctIncorrect {
+      font-size: large;
+  }
+  
+  #buttonInitials {
+      display: none;
+  }
+  
+  #inlineFormInput {
+      display: none;
+      width: 30%;
+  }
+  
+  /* highScores HTML */
+  
+  #highRow {
+      padding: 10px;
+  }
+  
+  #theTottaly {
+      color: #0e0d07;
+  }
+  
+  #header {
+      font-size: 4.5rem;
+      font-weight: 300;
+      line-height: 1.2;
+  }
+  
+
+  
+  /* Media query */
+  
+  @media (max-width: 830px) {
+      .display-3 {
+          font-size: 350%;
+          margin-top: 1px;
+      }
+      .jumbotron {
+          height: 100%;
+      }
+      #imagen1 {
+          float: right;
+      }
+      #cardMedia {
+          float: right;
+      }
+  }
+  
