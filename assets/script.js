@@ -9,11 +9,10 @@ var feedbackEl = document.querySelector("#feedback");
 
 
 var currentQuestionIndex = 0;
-var time = "100";
+var time = questions.length*15;
 var timerId;
 
 
-//Start Button??
 //startBtn.addEventListener("click", startQuiz);
 
 // Start Quiz
@@ -24,7 +23,7 @@ function startQuiz() {
     questionsEl.removeAttribute("class");
 
     timerId = setInterval(clockTick, 1000);
-console.log(time)
+//console.log(time)
     timerEl.textContent = time;
 
     //  setTime();
@@ -49,13 +48,13 @@ function setTime() {
         }
     }, 1000);
 }
-//setTime(); */
-
-
+//setTime(); 
+getQuestion();
+*/
 
 //Start Questions
 function getQuestion() {
-    var currentQuestion = question[currentQuestion.index];
+    var currentQuestion = questions[currentQuestionIndex];
     var titleEl = document.getElementById("question-title");
     titleEl.textContent = currentQuestion.title;
 
@@ -89,10 +88,13 @@ function questionClick() {
     } else {
         feedbackEl.textContent = "Correct!";
         feedbackEl.setAttribute("style", "color: green, font-weight: bolder; font-size: 20px");
-
     }
-
-    //
+    feedbackEl.setAttribute("class", "feedback");
+    setTimeout(function() {
+      feedbackEl.setAttribute("class", "feedback hide");
+    }, 1000);
+  
+  
     currentQuestionIndex++; //next question
 
     //Quiz ended check time
@@ -109,21 +111,20 @@ function quizEnd() {
 }
 
 // show end screen
-var endScreenEl = document.getElementById("end-screen");
-endScreenEl.removeAttribute("class");
+//var endScreenEl = document.getElementById("end-screen");
+//endScreenEl.removeAttribute("class");
 
-// show final score
-//var finalScoreEl = document.getElementById("finalscore");
+// show final score????
+//var finalScoreEl = document.getElementById("final-score");
 //finalScoreEl.textContent = time;
-document.getElementById("finalscore").textContent = time;
-
+//document.querySelector("#final-score").textContent = time;
 
 
 // hide questions section
-questionsEl.setAttribute("class", "hide");
+//questionsEl.setAttribute("class", "hide");
 
 // Update time
-function clockTime() {
+function clockTick() {
     time--;
     timerEl.textContent = time;
 
@@ -156,17 +157,22 @@ function saveHighscore() {
         window.localStorage.setItem("highscores", JSON.stringify(highscores));
 
         // redirect to next page
-        window.location.href = "score.html";
+        window.location.href = "highscore.html";
     }
 }
 
 function checkForEnter(event) {
-    // "13" represents the enter key
+    //  represents the enter key
     if (event.key === "Enter") {
         saveHighscore();
     }
 }
 
-startBtn.onclick = startQuiz(); // start quiz
-submitBtn.onclick = saveHighscore(); // submit initials
-initialsEl.onkeyup = checkForEnter(); //enterinitials
+//submitBtn.addEventListener("click", saveHighscore)
+ // submit initials
+
+startBtn.addEventListener("click", startQuiz) // start quiz
+console.log(startBtn)
+
+//initialsEl.addEventListener("keyup", checkForEnter)
+ //enterinitials

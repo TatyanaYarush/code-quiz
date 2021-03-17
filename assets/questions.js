@@ -1,6 +1,6 @@
-var question = [
+var questions = [
     {
-        question: "Inside which HTML element do we put the JavaScript?",
+        title: "Inside which HTML element do we put the JavaScript?",
         choices: [
             "<script>",
             "<js>",
@@ -10,7 +10,7 @@ var question = [
         answer: "<script>"
     },
     {
-        question: "What is the correct syntax for referring to an external script called 'xxx.js'?",
+        title: "What is the correct syntax for referring to an external script called 'xxx.js'?",
         choices: [
             "<script name='./xxx.js'>",
             "<script href='./xxx.js'>",
@@ -20,7 +20,7 @@ var question = [
         answer: "<script scr='./xxx.js'>"
     },
     {
-        question: "How do you create a function in JavaScript?",
+        title: "How do you create a function in JavaScript?",
         choices: [
             "function = myFunction()",
             "function:myFunction(",
@@ -30,7 +30,7 @@ var question = [
         answer: "function myFunction()"
     },
     {
-        question: "How to write an IF statement for executing some code if 'i' is NOT equal to 5?",
+        title: "How to write an IF statement for executing some code if 'i' is NOT equal to 5?",
         choices: [
             "if (i != 5)  ",
             "if (i <> 5)",
@@ -40,7 +40,7 @@ var question = [
         answer: "if (i != 5)  "
     },
     {
-        question: "What is the correct way to write a JavaScript array?",
+        title: "What is the correct way to write a JavaScript array?",
         choices: [
             "var colors = (1:'red', 2:'green', 3:'blue')",
             "var colors = ['red', 'green', 'blue']",
@@ -50,7 +50,7 @@ var question = [
         answer: "var colors = ['red', 'green', 'blue']"
     },
     {
-        question: "How can you add a comment in a JavaScript?",
+        title: "How can you add a comment in a JavaScript?",
         choices: [
             "//This is a comment",
             "'This is a comment",
@@ -60,7 +60,7 @@ var question = [
         answer: "//This is a comment"
     },
     {
-        question: "What is the data type of variables in JavaScript?",
+        title: "What is the data type of variables in JavaScript?",
         choices: [
             "Object data types",
             "Function data type",
