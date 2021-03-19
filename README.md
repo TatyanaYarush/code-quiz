@@ -33,3 +33,5 @@ THEN the game is over
 WHEN the game is over
 THEN I can save my initials and my score
 ```
+![screenshot code quiz](https://user-images.githubusercontent.com/70031550/111817287-3a632900-88b4-11eb-9db6-54e2d4143a57.JPG)
+
