@@ -25,49 +25,45 @@
     <div class="jumbotron jumbotron-fluid">
         <div class="container-fluid">
             <h1 class="display-3">Coding Quiz Challenge <br>
-                Answer the following JavaScript questions within the time limit.<br>
+                <p> Answer the following JavaScript questions within the time limit.<br>
                 Try your best to get the HIGH SCORE.<br>
                 Notes: Incorrect answers will penalize your time by 3 seconds!<br>
-                GOOD LUCK!<br>
+                GOOD LUCK!</p><br>
             </h1>
 
 
             <p class="lead">
 
                 <a class="btn btn-dark btn-lg" href="#" role="button" id="startQuiz">Start Quiz</a>
-                <input type="text" class="form-control mb-6" id="inlineFormInput" placeholder="Enter your initials">
+                <input type="text" class="form-control mb-4" id="inlineFormInput" placeholder="Enter your initials">
                 <a class="btn btn-dark btn-lg" href="highscore.html" role="button" id="buttonInitials">Submit</a>
             </p>
         </div>
     </div>
 
     <div class="col-4" id="questionsCard">
-        <div class="card text-center" style="width: 18rem;" id="cardMedia">
+        <div class="card text-center" style="width: 40rem;" id="cardMedia">
             <div class="card-body">
                 <h5 class="card-title">Questions</h5>
                 <p class="card-text" id="questions">With supporting text below as a natural lead-in to additional
                     content??</p>
                 <div class="row buttonRow">
-                    <a href="#" class="btn btn-dark quizBtn" id="button1">Go somewhere</a>
+                    <a href="#" class="btn btn-secondary quizBtn" id="button1">Go somewhere</a>
                 </div>
                 <div class="row buttonRow">
-                    <a href="#" class="btn btn-dark quizBtn" id="button2">Go somewhere</a>
+                    <a href="#" class="btn btn-secondary quizBtn" id="button2">Go somewhere</a>
                 </div>
                 <div class="row buttonRow">
-                    <a href="#" class="btn btn-dark quizBtn" id="button3">Go somewhere</a>
+                    <a href="#" class="btn btn-secondary quizBtn" id="button3">Go somewhere</a>
                 </div>
                 <div class="row buttonRow">
-                    <a href="#" class="btn btn-dark quizBtn" id="button4">Go somewhere</a>
+                    <a href="#" class="btn btn-secondary quizBtn" id="button4">Go somewhere</a>
                 </div>
                 <div class="row buttonRow">
                     <p id="correctIncorrect"></p>
                 </div>
             </div>
         </div>
-    </div>
-
-    </div>
-    </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
@@ -78,9 +74,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
-    <script type="text/javascript" src="./assets/script.js"></script>
-    <script type="text/javascript" src="./assets/highscore.js"></script>
-    <script type="text/javascript" src="./assets/questions.js"></script>
+    <script src="./assets/script.js"></script>
+    <script src="./assets/questions.js"></script>
 </body>
 
 </html>

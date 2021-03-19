@@ -2,17 +2,15 @@
 body {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   margin: 2em;
-  background-color: rgb(123, 168, 182);
+  background-color: rgb(135, 168, 179);
   }
   
   #row1 {
       padding: 30px;
+      font-weight: bold;
+      font-size: 20px;
   }
-  
-  #row2 {
-      justify-content: center;
-  }
-  
+
   .col-3 {
       color: #c00b0b;
       text-align: center;
@@ -26,8 +24,6 @@ body {
       text-align: center;
       margin-top: -50px;
       font-size: 25px;
-     
-      
   }
   
   .lead {
@@ -37,6 +33,16 @@ body {
   .jumbotron {
       background-color: #f0ead6;
       height: 300px;
+      width: 60rem;
+      position: absolute;
+      top: 35%;
+      left:50%;
+      transform: translate(-50%, -50%);
+  }
+
+  div p {
+    margin: 17px;
+    font-size: 20px;
   }
   
   .buttonRow {
@@ -46,13 +52,20 @@ body {
   
   .card {
       background-color: #f0ead6;
-      
+      width: 50rem;
+      top: 35%;
+      left: 50%;
+      position: absolute;
+      transform: translate(-50%, -50%) 
   }
-  
 
-  
   .col-4 {
-      text-align: -webkit-center;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 40%;
+    left:62%;
+    transform: translate(-180%, -50%);
   }
   
   #questionsCard {
@@ -83,12 +96,10 @@ body {
   }
   
   #header {
-      font-size: 4.5rem;
+      font-size: 2rem;
       font-weight: 300;
       line-height: 1.2;
   }
-  
-
   
   /* Media query */
   
