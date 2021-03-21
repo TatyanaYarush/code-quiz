@@ -26,7 +26,7 @@ var questions = [{
   answer2: "if (i <> 5)",
   answer3: "if i =! 5 then",
   answer4: "if i <> 5",
-  correct: "if (i != 5)  "
+  correct: "if (i != 5)"
 }, {
   question: "What is the correct way to write a JavaScript array?",
   answer1: "var colors = (1:'red', 2:'green', 3:'blue')",
